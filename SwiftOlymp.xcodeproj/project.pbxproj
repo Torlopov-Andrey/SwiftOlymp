@@ -10,15 +10,20 @@
 		8126E0E38718A648875EEDBC /* Pods_SwiftOlymp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A5EC99039A066AD4AF3EC9 /* Pods_SwiftOlymp.framework */; };
 		A42D4EB21FAF481100877BD1 /* LocalizationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42D4EB11FAF481100877BD1 /* LocalizationExtensions.swift */; };
 		A42D4ED61FAF486300877BD1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A42D4ED81FAF486300877BD1 /* Localizable.strings */; };
+		A44C75EC1FB3256F0001CC55 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C75EB1FB3256F0001CC55 /* APIRouter.swift */; };
+		A44C75EE1FB3267C0001CC55 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C75ED1FB3267B0001CC55 /* Keychain.swift */; };
+		A44C76181FB326F40001CC55 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C76141FB326F40001CC55 /* Window.swift */; };
+		A44C76191FB326F40001CC55 /* Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C76151FB326F40001CC55 /* Inspectable.swift */; };
+		A44C761A1FB326F40001CC55 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C76161FB326F40001CC55 /* View.swift */; };
+		A44C761B1FB326F40001CC55 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C76171FB326F40001CC55 /* GradientView.swift */; };
+		A44C76481FB3271D0001CC55 /* AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C76471FB3271D0001CC55 /* AlamofireImage.swift */; };
 		A4A202231FA9B5F9001F0D9C /* Queues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A2021E1FA9B5F9001F0D9C /* Queues.swift */; };
 		A4A202241FA9B5F9001F0D9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A2021F1FA9B5F9001F0D9C /* ViewController.swift */; };
 		A4A202251FA9B5F9001F0D9C /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A202201FA9B5F9001F0D9C /* Image.swift */; };
 		A4A202261FA9B5F9001F0D9C /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A202211FA9B5F9001F0D9C /* Timer.swift */; };
 		A4A2022A1FA9B668001F0D9C /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A202291FA9B668001F0D9C /* UserDefaults.swift */; };
-		A4A2022C1FA9B72B001F0D9C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A2022B1FA9B72B001F0D9C /* CoreDataManager.swift */; };
 		A4D764831F9A7514003B3248 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D764821F9A7514003B3248 /* AppDelegate.swift */; };
 		A4D764881F9A7514003B3248 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D764861F9A7514003B3248 /* Main.storyboard */; };
-		A4D7648B1F9A7514003B3248 /* SwiftOlymp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4D764891F9A7514003B3248 /* SwiftOlymp.xcdatamodeld */; };
 		A4D7648D1F9A7514003B3248 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D7648C1F9A7514003B3248 /* Assets.xcassets */; };
 		A4D764901F9A7514003B3248 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D7648E1F9A7514003B3248 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -30,16 +35,21 @@
 		A42D4EB11FAF481100877BD1 /* LocalizationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationExtensions.swift; sourceTree = "<group>"; };
 		A42D4ED71FAF486300877BD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A42D4ED91FAF486500877BD1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A44C75EB1FB3256F0001CC55 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		A44C75ED1FB3267B0001CC55 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		A44C76141FB326F40001CC55 /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
+		A44C76151FB326F40001CC55 /* Inspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inspectable.swift; sourceTree = "<group>"; };
+		A44C76161FB326F40001CC55 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		A44C76171FB326F40001CC55 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		A44C76471FB3271D0001CC55 /* AlamofireImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireImage.swift; sourceTree = "<group>"; };
 		A4A2021E1FA9B5F9001F0D9C /* Queues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queues.swift; sourceTree = "<group>"; };
 		A4A2021F1FA9B5F9001F0D9C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A4A202201FA9B5F9001F0D9C /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		A4A202211FA9B5F9001F0D9C /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		A4A202291FA9B668001F0D9C /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
-		A4A2022B1FA9B72B001F0D9C /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		A4D7647F1F9A7514003B3248 /* SwiftOlymp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftOlymp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D764821F9A7514003B3248 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4D764871F9A7514003B3248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A4D7648A1F9A7514003B3248 /* SwiftOlymp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftOlymp.xcdatamodel; sourceTree = "<group>"; };
 		A4D7648C1F9A7514003B3248 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4D7648F1F9A7514003B3248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4D764911F9A7514003B3248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,9 +76,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A44C75EA1FB324B80001CC55 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A44C75EB1FB3256F0001CC55 /* APIRouter.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 		A4A202181FA9B571001F0D9C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A44C75EA1FB324B80001CC55 /* API */,
 				A4A202281FA9B61C001F0D9C /* Utils */,
 				A4A202271FA9B617001F0D9C /* Ext */,
 			);
@@ -98,7 +117,6 @@
 		A4A2021B1FA9B598001F0D9C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A4D764891F9A7514003B3248 /* SwiftOlymp.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -113,6 +131,11 @@
 		A4A202271FA9B617001F0D9C /* Ext */ = {
 			isa = PBXGroup;
 			children = (
+				A44C76471FB3271D0001CC55 /* AlamofireImage.swift */,
+				A44C76171FB326F40001CC55 /* GradientView.swift */,
+				A44C76151FB326F40001CC55 /* Inspectable.swift */,
+				A44C76161FB326F40001CC55 /* View.swift */,
+				A44C76141FB326F40001CC55 /* Window.swift */,
 				A42D4EB11FAF481100877BD1 /* LocalizationExtensions.swift */,
 				A4A202291FA9B668001F0D9C /* UserDefaults.swift */,
 				A4A202201FA9B5F9001F0D9C /* Image.swift */,
@@ -124,7 +147,7 @@
 		A4A202281FA9B61C001F0D9C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				A4A2022B1FA9B72B001F0D9C /* CoreDataManager.swift */,
+				A44C75ED1FB3267B0001CC55 /* Keychain.swift */,
 				A4A2021E1FA9B5F9001F0D9C /* Queues.swift */,
 				A4A202211FA9B5F9001F0D9C /* Timer.swift */,
 			);
@@ -315,13 +338,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4A202241FA9B5F9001F0D9C /* ViewController.swift in Sources */,
+				A44C76181FB326F40001CC55 /* Window.swift in Sources */,
+				A44C76191FB326F40001CC55 /* Inspectable.swift in Sources */,
+				A44C75EC1FB3256F0001CC55 /* APIRouter.swift in Sources */,
 				A4A202251FA9B5F9001F0D9C /* Image.swift in Sources */,
 				A4A202261FA9B5F9001F0D9C /* Timer.swift in Sources */,
 				A4D764831F9A7514003B3248 /* AppDelegate.swift in Sources */,
-				A4D7648B1F9A7514003B3248 /* SwiftOlymp.xcdatamodeld in Sources */,
+				A44C75EE1FB3267C0001CC55 /* Keychain.swift in Sources */,
+				A44C761A1FB326F40001CC55 /* View.swift in Sources */,
 				A4A2022A1FA9B668001F0D9C /* UserDefaults.swift in Sources */,
-				A4A2022C1FA9B72B001F0D9C /* CoreDataManager.swift in Sources */,
+				A44C761B1FB326F40001CC55 /* GradientView.swift in Sources */,
 				A42D4EB21FAF481100877BD1 /* LocalizationExtensions.swift in Sources */,
+				A44C76481FB3271D0001CC55 /* AlamofireImage.swift in Sources */,
 				A4A202231FA9B5F9001F0D9C /* Queues.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,19 +546,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		A4D764891F9A7514003B3248 /* SwiftOlymp.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A4D7648A1F9A7514003B3248 /* SwiftOlymp.xcdatamodel */,
-			);
-			currentVersion = A4D7648A1F9A7514003B3248 /* SwiftOlymp.xcdatamodel */;
-			path = SwiftOlymp.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = A4D764771F9A7514003B3248 /* Project object */;
 }
