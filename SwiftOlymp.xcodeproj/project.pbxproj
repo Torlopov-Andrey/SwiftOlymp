@@ -17,6 +17,8 @@
 		A44C761A1FB326F40001CC55 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C76161FB326F40001CC55 /* View.swift */; };
 		A44C761B1FB326F40001CC55 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C76171FB326F40001CC55 /* GradientView.swift */; };
 		A44C76481FB3271D0001CC55 /* AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C76471FB3271D0001CC55 /* AlamofireImage.swift */; };
+		A44C76CC1FB5C2540001CC55 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C76CB1FB5C2540001CC55 /* CoreDataManager.swift */; };
+		A44C76D21FB5C28D0001CC55 /* SwiftOlymp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A44C76D01FB5C28D0001CC55 /* SwiftOlymp.xcdatamodeld */; };
 		A4A202231FA9B5F9001F0D9C /* Queues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A2021E1FA9B5F9001F0D9C /* Queues.swift */; };
 		A4A202241FA9B5F9001F0D9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A2021F1FA9B5F9001F0D9C /* ViewController.swift */; };
 		A4A202251FA9B5F9001F0D9C /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A202201FA9B5F9001F0D9C /* Image.swift */; };
@@ -42,6 +44,8 @@
 		A44C76161FB326F40001CC55 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		A44C76171FB326F40001CC55 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		A44C76471FB3271D0001CC55 /* AlamofireImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireImage.swift; sourceTree = "<group>"; };
+		A44C76CB1FB5C2540001CC55 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		A44C76D11FB5C28D0001CC55 /* SwiftOlymp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftOlymp.xcdatamodel; sourceTree = "<group>"; };
 		A4A2021E1FA9B5F9001F0D9C /* Queues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queues.swift; sourceTree = "<group>"; };
 		A4A2021F1FA9B5F9001F0D9C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A4A202201FA9B5F9001F0D9C /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 		A4A2021B1FA9B598001F0D9C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A44C76D01FB5C28D0001CC55 /* SwiftOlymp.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 		A4A202281FA9B61C001F0D9C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A44C76CB1FB5C2540001CC55 /* CoreDataManager.swift */,
 				A44C75ED1FB3267B0001CC55 /* Keychain.swift */,
 				A4A2021E1FA9B5F9001F0D9C /* Queues.swift */,
 				A4A202211FA9B5F9001F0D9C /* Timer.swift */,
@@ -340,6 +346,7 @@
 				A4A202241FA9B5F9001F0D9C /* ViewController.swift in Sources */,
 				A44C76181FB326F40001CC55 /* Window.swift in Sources */,
 				A44C76191FB326F40001CC55 /* Inspectable.swift in Sources */,
+				A44C76CC1FB5C2540001CC55 /* CoreDataManager.swift in Sources */,
 				A44C75EC1FB3256F0001CC55 /* APIRouter.swift in Sources */,
 				A4A202251FA9B5F9001F0D9C /* Image.swift in Sources */,
 				A4A202261FA9B5F9001F0D9C /* Timer.swift in Sources */,
@@ -349,6 +356,7 @@
 				A4A2022A1FA9B668001F0D9C /* UserDefaults.swift in Sources */,
 				A44C761B1FB326F40001CC55 /* GradientView.swift in Sources */,
 				A42D4EB21FAF481100877BD1 /* LocalizationExtensions.swift in Sources */,
+				A44C76D21FB5C28D0001CC55 /* SwiftOlymp.xcdatamodeld in Sources */,
 				A44C76481FB3271D0001CC55 /* AlamofireImage.swift in Sources */,
 				A4A202231FA9B5F9001F0D9C /* Queues.swift in Sources */,
 			);
@@ -546,6 +554,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A44C76D01FB5C28D0001CC55 /* SwiftOlymp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A44C76D11FB5C28D0001CC55 /* SwiftOlymp.xcdatamodel */,
+			);
+			currentVersion = A44C76D11FB5C28D0001CC55 /* SwiftOlymp.xcdatamodel */;
+			path = SwiftOlymp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A4D764771F9A7514003B3248 /* Project object */;
 }
