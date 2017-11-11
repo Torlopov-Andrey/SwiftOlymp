@@ -11,6 +11,7 @@
     <customFonts key="customFonts">
         <array key="AppleSDGothicNeo.ttc">
             <string>AppleSDGothicNeo-Light</string>
+            <string>AppleSDGothicNeo-Regular</string>
         </array>
         <array key="Roboto-Light.ttf">
             <string>Roboto-Light</string>
@@ -679,15 +680,38 @@
                                                     <outlet property="dataSource" destination="On6-jA-R9q" id="Bw5-er-HMB"/>
                                                 </connections>
                                             </tableView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mEm-Ku-B4s">
+                                                <rect key="frame" x="0.0" y="89" width="268" height="578"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=".no.history" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FtO-G7-NMA">
+                                                        <rect key="frame" x="97" y="279.5" width="75.5" height="20"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="lzText" value="no.history"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="FtO-G7-NMA" firstAttribute="centerY" secondItem="mEm-Ku-B4s" secondAttribute="centerY" id="4tN-6V-EVD"/>
+                                                    <constraint firstItem="FtO-G7-NMA" firstAttribute="centerX" secondItem="mEm-Ku-B4s" secondAttribute="centerX" id="TcG-b2-57r"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="mEm-Ku-B4s" firstAttribute="trailing" secondItem="r0B-gh-cKV" secondAttribute="trailing" id="EVg-r7-449"/>
+                                            <constraint firstItem="mEm-Ku-B4s" firstAttribute="leading" secondItem="r0B-gh-cKV" secondAttribute="leading" id="Fhg-7T-mgu"/>
                                             <constraint firstItem="r0B-gh-cKV" firstAttribute="top" secondItem="FI8-1q-XKq" secondAttribute="bottom" constant="20" id="GYi-ff-9EK"/>
                                             <constraint firstItem="r0B-gh-cKV" firstAttribute="leading" secondItem="hDL-4E-C61" secondAttribute="leading" id="WuD-IS-kTa"/>
                                             <constraint firstAttribute="trailing" secondItem="r0B-gh-cKV" secondAttribute="trailing" id="Xx0-7F-mPZ"/>
+                                            <constraint firstItem="mEm-Ku-B4s" firstAttribute="bottom" secondItem="r0B-gh-cKV" secondAttribute="bottom" id="ZTf-7x-eZx"/>
                                             <constraint firstItem="FI8-1q-XKq" firstAttribute="centerX" secondItem="hDL-4E-C61" secondAttribute="centerX" id="c2x-Sg-h2l"/>
                                             <constraint firstItem="FI8-1q-XKq" firstAttribute="top" secondItem="hDL-4E-C61" secondAttribute="top" constant="50" id="mxk-Ew-A5K"/>
                                             <constraint firstAttribute="bottom" secondItem="r0B-gh-cKV" secondAttribute="bottom" id="vl6-wt-Hpv"/>
+                                            <constraint firstItem="mEm-Ku-B4s" firstAttribute="top" secondItem="r0B-gh-cKV" secondAttribute="top" id="wGI-y4-JMZ"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -721,6 +745,7 @@
                     <connections>
                         <outlet property="backgroundView" destination="AUI-3p-LhG" id="x4Z-ph-T2T"/>
                         <outlet property="contentView" destination="hDL-4E-C61" id="Ahl-my-WPK"/>
+                        <outlet property="emptyView" destination="mEm-Ku-B4s" id="gjS-x2-SKB"/>
                         <outlet property="tableView" destination="r0B-gh-cKV" id="7z3-oz-b1x"/>
                     </connections>
                 </viewController>

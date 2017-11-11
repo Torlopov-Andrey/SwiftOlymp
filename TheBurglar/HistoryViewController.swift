@@ -5,6 +5,7 @@ class HistoryViewController: UIViewController {
     @IBOutlet private(set) var backgroundView: UIView!
     @IBOutlet private(set) var contentView: UIView!
     @IBOutlet private(set) var tableView: UITableView!
+    @IBOutlet private(set) var emptyView: UIView!
     
     private var isSlided: Bool = false
     fileprivate let colors = (exactly: #colorLiteral(red: 0.5803921569, green: 0.8784313725, blue: 0.2666666667, alpha: 1), exist: #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1), absent: #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1))
@@ -72,6 +73,7 @@ extension HistoryViewController {
         if let vc = segue.destination as? MainViewController {
             vc.leftPanelAction = {
                 self.history = vc.history
+                self.emptyView.isHidden = vc.history.count > 0
                 self.set(slided: !self.isSlided, animated: true)
             }
         }
