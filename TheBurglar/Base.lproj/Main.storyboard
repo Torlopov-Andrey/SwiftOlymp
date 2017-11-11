@@ -446,8 +446,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QB1-ry-OOC">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AUI-3p-LhG">
-                                        <rect key="frame" x="0.0" y="-1" width="375" height="667"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AUI-3p-LhG">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <color key="backgroundColor" red="0.2666666667" green="0.29411764709999999" blue="0.36078431370000003" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="icj-eg-xFs" appends="YES" id="9JC-qC-UIT"/>
@@ -485,49 +485,41 @@
                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D1l-yC-SCF">
                                                                     <rect key="frame" x="10" y="4.5" width="248" height="50.5"/>
                                                                     <subviews>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHJ-Sj-pLP">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="50.5"/>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lHJ-Sj-pLP">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="59" height="50.5"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDH-94-NTs">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="20" height="50.5"/>
-                                                                                    <constraints>
-                                                                                        <constraint firstAttribute="width" constant="20" id="pCl-fc-ZBj"/>
-                                                                                    </constraints>
+                                                                                    <rect key="frame" x="0.0" y="15" width="11" height="20.5"/>
                                                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="17"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrj-sv-hbJ">
-                                                                                    <rect key="frame" x="20" y="0.0" width="20" height="50.5"/>
+                                                                                    <rect key="frame" x="16" y="15" width="11" height="20.5"/>
                                                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="17"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiX-DR-wAp">
-                                                                                    <rect key="frame" x="40" y="0.0" width="20" height="50.5"/>
+                                                                                    <rect key="frame" x="32" y="15" width="11" height="20.5"/>
                                                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="17"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zN-BC-kFd">
-                                                                                    <rect key="frame" x="60" y="0.0" width="20" height="50.5"/>
+                                                                                    <rect key="frame" x="48" y="15" width="11" height="20.5"/>
                                                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="17"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
-                                                                            <constraints>
-                                                                                <constraint firstItem="uDH-94-NTs" firstAttribute="width" secondItem="qrj-sv-hbJ" secondAttribute="width" id="S6D-YX-8F6"/>
-                                                                                <constraint firstItem="uDH-94-NTs" firstAttribute="width" secondItem="4zN-BC-kFd" secondAttribute="width" id="mlt-xQ-FZg"/>
-                                                                                <constraint firstItem="uDH-94-NTs" firstAttribute="width" secondItem="tiX-DR-wAp" secondAttribute="width" id="oEk-GT-rWA"/>
-                                                                            </constraints>
                                                                         </stackView>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GwE-fM-9Wz">
-                                                                            <rect key="frame" x="80" y="0.0" width="108" height="50.5"/>
+                                                                            <rect key="frame" x="59" y="0.0" width="99" height="50.5"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </view>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mnx-yt-x9U">
-                                                                            <rect key="frame" x="188" y="0.0" width="60" height="50.5"/>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mnx-yt-x9U">
+                                                                            <rect key="frame" x="158" y="0.0" width="90" height="50.5"/>
                                                                             <subviews>
                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icc-31-mJi" customClass="DesignableView" customModule="TheBurglar" customModuleProvider="target">
                                                                                     <rect key="frame" x="0.0" y="18" width="15" height="15"/>
@@ -561,7 +553,7 @@
                                                                                     </userDefinedRuntimeAttributes>
                                                                                 </view>
                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZN-1O-dbB" customClass="DesignableView" customModule="TheBurglar" customModuleProvider="target">
-                                                                                    <rect key="frame" x="15" y="18" width="15" height="15"/>
+                                                                                    <rect key="frame" x="25" y="18" width="15" height="15"/>
                                                                                     <subviews>
                                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9z-0J-UKq" customClass="DesignableView" customModule="TheBurglar" customModuleProvider="target">
                                                                                             <rect key="frame" x="2.5" y="2.5" width="10" height="10"/>
@@ -592,7 +584,7 @@
                                                                                     </userDefinedRuntimeAttributes>
                                                                                 </view>
                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWc-Dy-JGS" customClass="DesignableView" customModule="TheBurglar" customModuleProvider="target">
-                                                                                    <rect key="frame" x="30" y="18" width="15" height="15"/>
+                                                                                    <rect key="frame" x="50" y="18" width="15" height="15"/>
                                                                                     <subviews>
                                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OCO-G2-XQM" customClass="DesignableView" customModule="TheBurglar" customModuleProvider="target">
                                                                                             <rect key="frame" x="2.5" y="2.5" width="10" height="10"/>
@@ -623,7 +615,7 @@
                                                                                     </userDefinedRuntimeAttributes>
                                                                                 </view>
                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYy-R3-a1v" customClass="DesignableView" customModule="TheBurglar" customModuleProvider="target">
-                                                                                    <rect key="frame" x="45" y="18" width="15" height="15"/>
+                                                                                    <rect key="frame" x="75" y="18" width="15" height="15"/>
                                                                                     <subviews>
                                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwJ-sF-4OQ" customClass="DesignableView" customModule="TheBurglar" customModuleProvider="target">
                                                                                             <rect key="frame" x="2.5" y="2.5" width="10" height="10"/>
