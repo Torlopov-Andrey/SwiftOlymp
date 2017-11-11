@@ -16,6 +16,10 @@ struct Line{
         var angleInRads: Measurement<UnitAngle>
         angleInRads = Measurement(value: -atan2(Double(end.y - begin.y),Double(end.x - begin.x)), unit: .radians)
         
+        if angleInRads.value < 0 {
+           angleInRads = Measurement(value: 2 * Double.pi + angleInRads.value, unit: .radians)
+        }
+        
         return angleInRads.converted(to: .degrees)
     }
 }

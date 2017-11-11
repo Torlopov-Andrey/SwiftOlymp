@@ -4,7 +4,6 @@ class HistoryViewController: UIViewController {
     
     @IBOutlet private(set) var backgroundView: UIView!
     @IBOutlet private(set) var contentView: UIView!
-
     
     private var isSlided: Bool = false
     

@@ -13,15 +13,13 @@ class RotateView: UIView {
     
     var numberValue: Int = 0
     var updateValue: ((Int) -> ())?
+    var touchEnd: (() -> ())?
     var changeDirection: (() -> ())?
     
     var line: Line!
+    var angle: Double = 0.0
     
-//    private var pcs: PolarCoordinateSystem!
-//    private var accumulateValue: CGFloat = 0
-//    private var currentDirectionCW: Bool?
-//    private var controlPoint: CGPoint!
-//    private var rotateAngle: Double = 0
+    var currentValue: Int = 0
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -30,7 +28,7 @@ class RotateView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        self.pcs = PolarCoordinateSystem(center: self.rotateImage.center)
+        //        self.pcs = PolarCoordinateSystem(center: self.rotateImage.center)
     }
     
     private var stepHelperDegree: CGFloat {
@@ -44,58 +42,34 @@ class RotateView: UIView {
         let touchPoint = touch.location(in: self)
         let centerPoint = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
         self.line = Line(begin: centerPoint, end: touchPoint)
-        
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
         let touchPoint = touch.location(in: self)
- 
+        
         self.line.end = touchPoint
-        print(line.angle.value)
         self.rotateImage.rotate(to: -line.angle.converted(to: UnitAngle.radians).value)
+        self.proccessAngle()
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.line = Line(begin: self.center, end: self.center)
+        if let t = self.touchEnd {
+            t()
+        }
     }
-    
-    
-    // MARK: - help methods
-    
-//    private func calculatePoints(currentPoint: CGPoint) -> Int {
-//        let topSide = self.controlPoint.y >= self.rotateImage.frame.size.height / 2
-//        let rightSide = self.controlPoint.x >= self.rotateImage.frame.size.width / 2
-//
-//        let direction = self.calcDirection(currentPoint: currentPoint)
-//
-//        switch direction {
-//        case .right:
-//            return topSide ? -1 : 1
-//        case .left:
-//            return topSide ? 1 : -1
-//        case .down:
-//            return rightSide ? 1 : -1
-//        case .up:
-//            return rightSide ? -1 : 1
-//        case .none:
-//            return 0
-//        }
-//    }
-
-//    private func calcDirection(currentPoint: CGPoint) -> Direction {
-//        let dX = currentPoint.x - self.controlPoint.x
-//        let dY = currentPoint.y - self.controlPoint.y
-//
-//        if max(dX, dY) <= 3 { return .none }
-//
-//        if dX > dY {
-//            return dX > 0 ? .right : .left
-//        }
-//        else {
-//            return dY > 0 ? .down : .up
-//        }
-//    }
 }
 
- 
+extension RotateView {
+    
+    fileprivate func proccessAngle() {
+        let stepValue = 360.0 / Double(self.sectionsNumber)
+        let number = Int(self.line.angle.value / stepValue)
+        guard number != self.numberValue  else { return }
+        self .numberValue = number
+        if let updateValue = self.updateValue {
+            updateValue(self.numberValue)
+        }
+    }
+}
+
