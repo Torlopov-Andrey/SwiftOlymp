@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+        </array>
         <array key="VerdanaBold.ttf">
             <string>Verdana-Bold</string>
         </array>
@@ -17,7 +20,7 @@
         <!--Main View Controller-->
         <scene sceneID="jzh-52-Nus">
             <objects>
-                <viewController id="GFk-iM-3Zt" customClass="MainViewController" customModule="LockBreaker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GFk-iM-3Zt" customClass="MainViewController" customModule="TheBurglar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="efB-nH-ODz"/>
                         <viewControllerLayoutGuide type="bottom" id="Kl0-e0-6me"/>
@@ -149,7 +152,7 @@
                                         <rect key="frame" x="315" y="577" width="22" height="22"/>
                                         <color key="tintColor" red="0.3450649381" green="0.34511920810000002" blue="0.34505301710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OwG-Cp-LoS" customClass="RotateView" customModule="LockBreaker" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OwG-Cp-LoS" customClass="RotateView" customModule="TheBurglar" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="215" width="345" height="332"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="71X-bh-Chr">
@@ -181,6 +184,14 @@
                                             <outlet property="rotateImage" destination="71X-bh-Chr" id="JoM-8V-qSc"/>
                                         </connections>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4J-1J-Aq6">
+                                        <rect key="frame" x="10" y="8" width="16" height="22"/>
+                                        <color key="tintColor" red="0.46314960719999998" green="0.764290154" blue="0.47542023659999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="history"/>
+                                        <connections>
+                                            <action selector="historyPressed:" destination="GFk-iM-3Zt" eventType="touchUpInside" id="oaT-cU-9nO"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92540907859999999" green="0.92554211620000004" blue="0.92537993190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -191,6 +202,8 @@
                                     <constraint firstAttribute="bottom" secondItem="2G7-iP-V8M" secondAttribute="bottom" constant="8" id="TXv-yR-8fr"/>
                                     <constraint firstAttribute="trailing" secondItem="sbb-Jw-yew" secondAttribute="trailing" constant="30" id="WjL-ci-4fy"/>
                                     <constraint firstAttribute="trailing" secondItem="2G7-iP-V8M" secondAttribute="trailing" constant="8" id="jie-YJ-Ypc"/>
+                                    <constraint firstItem="J4J-1J-Aq6" firstAttribute="leading" secondItem="EeG-YR-vyE" secondAttribute="leading" constant="10" id="oXd-OV-5Jl"/>
+                                    <constraint firstItem="J4J-1J-Aq6" firstAttribute="top" secondItem="EeG-YR-vyE" secondAttribute="top" constant="8" id="t7u-kq-xum"/>
                                     <constraint firstItem="OwG-Cp-LoS" firstAttribute="leading" secondItem="EeG-YR-vyE" secondAttribute="leading" id="xFI-a2-KHE"/>
                                     <constraint firstItem="sbb-Jw-yew" firstAttribute="top" secondItem="EeG-YR-vyE" secondAttribute="top" constant="47" id="yTQ-kl-4De"/>
                                 </constraints>
@@ -217,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MQW-1H-qpB" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="992.79999999999995" y="-545.57721139430294"/>
+            <point key="canvasLocation" x="1934" y="-545"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vrs-E8-zdG">
@@ -229,16 +242,100 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="GFk-iM-3Zt" kind="relationship" relationship="rootViewController" id="nG4-bv-6xA"/>
+                        <segue destination="On6-jA-R9q" kind="relationship" relationship="rootViewController" id="Wn9-fi-Z7x"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dOk-BC-Paj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="197.59999999999999" y="-543.77811094452773"/>
         </scene>
+        <!--History View Controller-->
+        <scene sceneID="OEQ-DQ-qAe">
+            <objects>
+                <viewController id="On6-jA-R9q" customClass="HistoryViewController" customModule="TheBurglar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nwe-3n-eqV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QtI-uM-wdd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="GFk-iM-3Zt" kind="embed" id="6wv-vB-YMR"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QB1-ry-OOC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AUI-3p-LhG">
+                                        <rect key="frame" x="0.0" y="-1" width="375" height="667"/>
+                                        <color key="backgroundColor" red="0.2666666667" green="0.29411764709999999" blue="0.36078431370000003" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="icj-eg-xFs" appends="YES" id="9JC-qC-UIT"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hDL-4E-C61">
+                                        <rect key="frame" x="0.0" y="0.0" width="268" height="667"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FI8-1q-XKq">
+                                                <rect key="frame" x="90.5" y="324" width="87" height="19"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="FI8-1q-XKq" firstAttribute="centerX" secondItem="hDL-4E-C61" secondAttribute="centerX" id="c2x-Sg-h2l"/>
+                                            <constraint firstItem="FI8-1q-XKq" firstAttribute="centerY" secondItem="hDL-4E-C61" secondAttribute="centerY" id="hIa-3V-YsM"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="hDL-4E-C61" firstAttribute="leading" secondItem="QB1-ry-OOC" secondAttribute="leading" id="4dN-tq-tj2"/>
+                                    <constraint firstAttribute="trailing" secondItem="AUI-3p-LhG" secondAttribute="trailing" id="Bkh-JS-ltp"/>
+                                    <constraint firstAttribute="bottom" secondItem="hDL-4E-C61" secondAttribute="bottom" id="Ple-n5-k40"/>
+                                    <constraint firstItem="AUI-3p-LhG" firstAttribute="leading" secondItem="QB1-ry-OOC" secondAttribute="leading" id="dcr-QM-mv0"/>
+                                    <constraint firstItem="hDL-4E-C61" firstAttribute="top" secondItem="QB1-ry-OOC" secondAttribute="top" id="qJB-hp-dc1"/>
+                                    <constraint firstAttribute="bottom" secondItem="AUI-3p-LhG" secondAttribute="bottom" id="rDK-Zn-Bsg"/>
+                                    <constraint firstItem="AUI-3p-LhG" firstAttribute="top" secondItem="QB1-ry-OOC" secondAttribute="top" id="xlO-42-2yv"/>
+                                    <constraint firstAttribute="trailing" secondItem="hDL-4E-C61" secondAttribute="trailing" constant="107" id="zTn-Tf-T4h"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0GR-Ff-NGE" firstAttribute="trailing" secondItem="QtI-uM-wdd" secondAttribute="trailing" id="0Sa-bb-yd7"/>
+                            <constraint firstItem="QtI-uM-wdd" firstAttribute="leading" secondItem="0GR-Ff-NGE" secondAttribute="leading" id="2sZ-Xe-D0g"/>
+                            <constraint firstItem="QB1-ry-OOC" firstAttribute="bottom" secondItem="QtI-uM-wdd" secondAttribute="bottom" id="OLe-wg-lpI"/>
+                            <constraint firstItem="QB1-ry-OOC" firstAttribute="trailing" secondItem="QtI-uM-wdd" secondAttribute="trailing" id="bor-BD-ih7"/>
+                            <constraint firstItem="QtI-uM-wdd" firstAttribute="top" secondItem="0GR-Ff-NGE" secondAttribute="top" constant="-20" id="cYN-Qy-KKg"/>
+                            <constraint firstItem="QB1-ry-OOC" firstAttribute="leading" secondItem="QtI-uM-wdd" secondAttribute="leading" id="cbq-sk-5jf"/>
+                            <constraint firstItem="0GR-Ff-NGE" firstAttribute="bottom" secondItem="QtI-uM-wdd" secondAttribute="bottom" id="m5X-6g-dgk"/>
+                            <constraint firstItem="QB1-ry-OOC" firstAttribute="top" secondItem="QtI-uM-wdd" secondAttribute="top" id="xIz-Sl-wbi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0GR-Ff-NGE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="u4n-4x-74x"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="AUI-3p-LhG" id="x4Z-ph-T2T"/>
+                        <outlet property="contentView" destination="hDL-4E-C61" id="Ahl-my-WPK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKK-xN-cfs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="icj-eg-xFs">
+                    <connections>
+                        <action selector="backgroundTap:" destination="On6-jA-R9q" id="i5z-lA-D4N"/>
+                        <outlet property="delegate" destination="On6-jA-R9q" id="Az2-0S-38G"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1063" y="-544"/>
+        </scene>
     </scenes>
     <resources>
         <image name="blink" width="229" height="116"/>
+        <image name="history" width="16" height="14"/>
         <image name="lock" width="303" height="303"/>
     </resources>
 </document>
