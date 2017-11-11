@@ -1,4 +1,5 @@
 import UIKit
+import CoreGraphics
 
 class RotateView: UIView {
     
@@ -46,55 +47,15 @@ class RotateView: UIView {
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
         let touchPoint = touch.location(in: self)
-        
-        if (touchPoint.x - self.frame.size.width / 2).abs < 30 ||
-            (touchPoint.y - self.frame.size.height / 2).abs < 30 {
-            self.controlPoint = touchPoint
-            
-            return
-        }
-        
-        
-        let calcedValue = CGFloat(calculatePoints(currentPoint: touchPoint))
-        
-        if self.currentDirectionCW == nil {
-            self.currentDirectionCW = calcedValue == -1
-        }
-        
-//        self.accumulateValue += calcedValue
-        
-//        self.accumulateValue +=
-        calculateDegree(point: touchPoint)
-        
-        
-//        print(self.accumulateValue)
-        
-//        if (self.currentDirectionCW == true && self.accumulateValue < 0) ||
-//            self.currentDirectionCW == false && self.accumulateValue > 0 {
-//            print("change direction!")
-//        }
-//        
-        
-//        if self.accumulateValue.abs >= self.stepHelperDegree {
-//            self.numberValue += 1
-//            print("change value \(self.numberValue)")
-//            self.accumulateValue = 0
-//        }
-        
-        
-//        if self.currentDirection == nil {
-//        
-//            self.currentDirection = pcs.clockwiseDirection(currentPoint: touchPoint, basePoint: self.controlPoint)
-//        }
-        
-//        calculate(point: touchPoint)
-        
+ 
+        let line = Line.init(begin: self.center, end: touchPoint)
+        print("center: \(self.center) touchPoint: \(touchPoint) degree: \(line.angle)")
+ 
         self.controlPoint = touchPoint
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
-//        print("end point = \(pcs.angle(point: touch.location(in: self)))")
     }
     
     
@@ -118,46 +79,6 @@ class RotateView: UIView {
         case .none:
             return 0
         }
-    }
-    
-    private func calculateDegree(point: CGPoint) {
-        
-        let degree = self.pcs.deltaDegree(currentPoint: point, basePoint: self.controlPoint)
-        self.accumulateValue += degree
-        print("degree \(self.accumulateValue)")
-        
-//        let CWDirection = self.pcs.clockwiseDirection(currentPoint: point, basePoint: self.controlPoint)
-        
-//        self.accumulateValue += degree.abs
-        
-//        let rads = Double(degree / 180.0)
-//        self.rotateAngle = CWDirection ? self.rotateAngle - rads/2 : self.rotateAngle + rads/2
-//        self.rotateAngle = self.rotateAngle > Double.pi * 2 ? self.rotateAngle - Double.pi * 2 : self.rotateAngle
-//        self.rotateImage.rotate(to: self.rotateAngle)
-//
-        
-//        if self.currentDirection != CWDirection {
-//            if let cd = self.changeDirection,
-//                let uv = self.updateValue {
-//                cd()
-//                uv(self.numberValue)
-//                
-//            }
-//            self.numberValue = 0
-//            self.accumulateDegree = 0
-//            self.currentDirection = CWDirection
-//        }
-//        
-//        if self.accumulateDegree >= self.stepHelperDegree {
-//            if let uv = self.updateValue {
-//                self.numberValue += 1
-//                if self.numberValue > 9 {
-//                    self.numberValue = 0
-//                }
-//                uv(self.numberValue)
-//            }
-//            self.accumulateDegree = 0
-//        }
     }
     
     private func calcDirection(currentPoint: CGPoint) -> Direction {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A40DEB051FB70FD70095E40B /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40DEB041FB70FD70095E40B /* HistoryViewController.swift */; };
+		A40DEB081FB73C320095E40B /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40DEB071FB73C320095E40B /* Line.swift */; };
 		A423CD581FA9A0AC009099F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A423CD571FA9A0AC009099F8 /* AppDelegate.swift */; };
 		A423CD5D1FA9A0AC009099F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A423CD5B1FA9A0AC009099F8 /* Main.storyboard */; };
 		A423CD5F1FA9A0AC009099F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A423CD5E1FA9A0AC009099F8 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		A40DEB041FB70FD70095E40B /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		A40DEB071FB73C320095E40B /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		A423CD541FA9A0AC009099F8 /* TheBurglar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheBurglar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A423CD571FA9A0AC009099F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A423CD5C1FA9A0AC009099F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		A40DEB061FB73C150095E40B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A40DEB071FB73C320095E40B /* Line.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		A423CD4B1FA9A0AC009099F8 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +118,7 @@
 				A4A201E31FA9A3A3001F0D9C /* Core */,
 				A40DEB011FB70ED20095E40B /* Resource */,
 				A40DEB031FB70EE70095E40B /* Controllers */,
+				A40DEB061FB73C150095E40B /* Model */,
 			);
 			path = TheBurglar;
 			sourceTree = "<group>";
@@ -206,6 +217,7 @@
 				A4A201EE1FA9A3B8001F0D9C /* LocalizationExtensions.swift in Sources */,
 				A4A201F91FA9A3C2001F0D9C /* MainViewController.swift in Sources */,
 				A40DEB051FB70FD70095E40B /* HistoryViewController.swift in Sources */,
+				A40DEB081FB73C320095E40B /* Line.swift in Sources */,
 				A4A201F31FA9A3B8001F0D9C /* Numbers.swift in Sources */,
 				A4A201F51FA9A3B8001F0D9C /* CornerView.swift in Sources */,
 				A4A201F61FA9A3B8001F0D9C /* BrushView.swift in Sources */,
