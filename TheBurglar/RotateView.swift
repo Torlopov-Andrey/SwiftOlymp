@@ -15,11 +15,13 @@ class RotateView: UIView {
     var updateValue: ((Int) -> ())?
     var changeDirection: (() -> ())?
     
-    private var pcs: PolarCoordinateSystem!
-    private var accumulateValue: CGFloat = 0
-    private var currentDirectionCW: Bool?
-    private var controlPoint: CGPoint!
-    private var rotateAngle: Double = 0
+    var line: Line!
+    
+//    private var pcs: PolarCoordinateSystem!
+//    private var accumulateValue: CGFloat = 0
+//    private var currentDirectionCW: Bool?
+//    private var controlPoint: CGPoint!
+//    private var rotateAngle: Double = 0
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -28,72 +30,72 @@ class RotateView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        self.pcs = PolarCoordinateSystem(center: self.rotateImage.center)
+//        self.pcs = PolarCoordinateSystem(center: self.rotateImage.center)
     }
     
     private var stepHelperDegree: CGFloat {
-        return 20.0 //360.0 / CGFloat(self.sectionsNumber)
+        return 20.0
     }
     
     //MARK: - Touches
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
-        self.accumulateValue = 0
-        self.controlPoint = touch.location(in: self)
+        let touchPoint = touch.location(in: self)
+        let centerPoint = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
+        self.line = Line(begin: centerPoint, end: touchPoint)
+        
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
         let touchPoint = touch.location(in: self)
  
-        let line = Line.init(begin: self.center, end: touchPoint)
-        print("center: \(self.center) touchPoint: \(touchPoint) degree: \(line.angle)")
- 
-        self.controlPoint = touchPoint
+        self.line.end = touchPoint
+        print(line.angle.value)
+        self.rotateImage.rotate(to: -line.angle.converted(to: UnitAngle.radians).value)
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = touches.first else { return }
+        self.line = Line(begin: self.center, end: self.center)
     }
     
     
     // MARK: - help methods
     
-    private func calculatePoints(currentPoint: CGPoint) -> Int {
-        let topSide = self.controlPoint.y >= self.rotateImage.frame.size.height / 2
-        let rightSide = self.controlPoint.x >= self.rotateImage.frame.size.width / 2
-        
-        let direction = self.calcDirection(currentPoint: currentPoint)
-        
-        switch direction {
-        case .right:
-            return topSide ? -1 : 1
-        case .left:
-            return topSide ? 1 : -1
-        case .down:
-            return rightSide ? 1 : -1
-        case .up:
-            return rightSide ? -1 : 1
-        case .none:
-            return 0
-        }
-    }
-    
-    private func calcDirection(currentPoint: CGPoint) -> Direction {
-        let dX = currentPoint.x - self.controlPoint.x
-        let dY = currentPoint.y - self.controlPoint.y
-        
-        if max(dX, dY) <= 3 { return .none }
-        
-        if dX > dY {
-            return dX > 0 ? .right : .left
-        }
-        else {
-            return dY > 0 ? .down : .up
-        }
-    }
+//    private func calculatePoints(currentPoint: CGPoint) -> Int {
+//        let topSide = self.controlPoint.y >= self.rotateImage.frame.size.height / 2
+//        let rightSide = self.controlPoint.x >= self.rotateImage.frame.size.width / 2
+//
+//        let direction = self.calcDirection(currentPoint: currentPoint)
+//
+//        switch direction {
+//        case .right:
+//            return topSide ? -1 : 1
+//        case .left:
+//            return topSide ? 1 : -1
+//        case .down:
+//            return rightSide ? 1 : -1
+//        case .up:
+//            return rightSide ? -1 : 1
+//        case .none:
+//            return 0
+//        }
+//    }
+
+//    private func calcDirection(currentPoint: CGPoint) -> Direction {
+//        let dX = currentPoint.x - self.controlPoint.x
+//        let dY = currentPoint.y - self.controlPoint.y
+//
+//        if max(dX, dY) <= 3 { return .none }
+//
+//        if dX > dY {
+//            return dX > 0 ? .right : .left
+//        }
+//        else {
+//            return dY > 0 ? .down : .up
+//        }
+//    }
 }
 
  

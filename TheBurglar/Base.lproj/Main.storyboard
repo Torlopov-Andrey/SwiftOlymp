@@ -162,7 +162,7 @@
                                                 <rect key="frame" x="21" y="4.5" width="303" height="303"/>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="71X-bh-Chr" firstAttribute="centerX" secondItem="OwG-Cp-LoS" secondAttribute="centerX" id="4lk-BN-Zil"/>
                                             <constraint firstItem="gwo-kS-KwF" firstAttribute="leading" secondItem="71X-bh-Chr" secondAttribute="leading" id="G8R-iB-wsg"/>
@@ -171,10 +171,6 @@
                                             <constraint firstItem="71X-bh-Chr" firstAttribute="centerY" secondItem="OwG-Cp-LoS" secondAttribute="centerY" id="o8K-B4-fQ3"/>
                                             <constraint firstItem="gwo-kS-KwF" firstAttribute="trailing" secondItem="71X-bh-Chr" secondAttribute="trailing" id="ur9-Mk-gZv"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clockWiseDirection" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="counterClockWiseDirection" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="subviews">
                                                 <exclude reference="gwo-kS-KwF"/>

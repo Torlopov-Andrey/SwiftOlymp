@@ -134,8 +134,8 @@
 				A4A201E41FA9A3B7001F0D9C /* LocalizationExtensions.swift */,
 				A4A201E91FA9A3B8001F0D9C /* Numbers.swift */,
 				A4A201E61FA9A3B7001F0D9C /* PolarCoordinateSystem.swift */,
-				A4A201EA1FA9A3B8001F0D9C /* RotateView.swift */,
 				A4A201ED1FA9A3B8001F0D9C /* View.swift */,
+				A4A201EA1FA9A3B8001F0D9C /* RotateView.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
