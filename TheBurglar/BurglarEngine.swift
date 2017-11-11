@@ -1,5 +1,7 @@
 import Foundation
 
+typealias HistoryItem = (numb1: Int, numb2: Int, numb3: Int, numb4: Int, exactly: Int, exist: Int)
+
 class BurglarEngine {
     
     private let countOfnumbers: Int = 4
@@ -7,7 +9,7 @@ class BurglarEngine {
     private var exist = 0
     
     var numbersForUnlock = [Int]()
-    var history = [(exactly: Int, exist: Int)]()
+    var history = [HistoryItem]()
     
     init() {
         setupNumber()
@@ -18,23 +20,26 @@ class BurglarEngine {
         exactly = 0
         history.removeAll()
         numbersForUnlock.removeAll()
+        
         for _ in 1...countOfnumbers {
             numbersForUnlock.append(Int(arc4random_uniform(10)))
         }
     }
     
-    func checkNumber(numbers: [Int]) -> (exactly: Int, exist: Int) {
+    func checkNumber(numbers: [Int]) -> Bool {
         guard numbers.count == countOfnumbers else { fatalError() }
         exactlyCheck(numbers: numbers)
         existCheck(numbers: numbers)
-        history.append((exactly: exactly, exist: exist))
-        return (exactly: exactly, exist: exist)
+        let historyItem: HistoryItem = (numb1:numbers[0], numb2:numbers[1], numb3:numbers[2], numb4:numbers[3], exactly: exactly, exist: exist)
+        self.history.append(historyItem)
+        
+        return historyItem.exactly == self.countOfnumbers
     }
     
     private func exactlyCheck(numbers: [Int]) {
         for i in 0...countOfnumbers - 1 {
             if numbers[i] == numbersForUnlock[i] {
-                exactly += 1
+                self.exactly += 1
             }
         }
     }
