@@ -4,6 +4,7 @@ class HistoryViewController: UIViewController {
     
     @IBOutlet private(set) var backgroundView: UIView!
     @IBOutlet private(set) var contentView: UIView!
+    @IBOutlet private(set) var tableView: UITableView!
     
     private var isSlided: Bool = false
     
@@ -69,6 +70,27 @@ extension HistoryViewController {
                 self.set(slided: !self.isSlided, animated: true)
             }
         }
+    }
+}
+
+//MARK:- TableViewDataSource
+
+extension HistoryViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier:
+            "Cell") as! HistoryTableViewCell
+
+        cell.numberLabels[0].text = "\(indexPath.row)"
+        cell.numberLabels[1].text = "\(indexPath.row)"
+        cell.numberLabels[2].text = "\(indexPath.row)"
+        cell.numberLabels[3].text = "\(indexPath.row)"
+        
+        return cell
     }
 }
 
