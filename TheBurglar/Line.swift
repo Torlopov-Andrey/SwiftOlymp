@@ -1,11 +1,3 @@
-//
-//  Line.swift
-//  TouchTracker
-//
-//  Created by Александр Гаврилов on 29.10.17.
-//  Copyright © 2017 Александр Гаврилов. All rights reserved.
-//
-
 import Foundation
 import CoreGraphics
 

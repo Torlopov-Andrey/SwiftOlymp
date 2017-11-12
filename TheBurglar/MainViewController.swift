@@ -1,6 +1,5 @@
 import UIKit
-import AVFoundation
-
+import AudioToolbox
 
 class MainViewController: UIViewController {
 
@@ -35,7 +34,7 @@ class MainViewController: UIViewController {
         self.burglarEngine = BurglarEngine()
         
         self.rotateView.updateValue = { (value: Int) in
-            print(value)
+            SoundManager.playSound()
             self.numberLabels[self.currentNumber].text = "\(value)"
         }
         
@@ -45,27 +44,13 @@ class MainViewController: UIViewController {
                     s.currentNumber + 1 : 0
                 
                 if s.currentNumber == 0 {
-                    var numbers = [Int]()
-                    s.numberLabels.forEach({ (label: UILabel) in
-                        if let str = label.text {
-                            numbers.append(Int(str) ?? 0)
-                        }
-                        else {
-                            numbers.append(0)
-                        }
-                    })
-                    
-                    if s.burglarEngine.checkNumber(numbers: numbers) {
-                        Alert(alert: "win.message".localized, preferredStyle: UIAlertControllerStyle.alert, actions: "ok!").present(in: self)
-                        s.reload()
-                    }
-                    else {
-                        s.numbersView.shake()
-                    }
+                    s.checkNumbers()
                 }
                 s.updateCurrentMarker()
             }
         }
+        
+        SoundManager.setupSound(num: 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -88,17 +73,48 @@ class MainViewController: UIViewController {
         self.updateCurrentMarker()
     }
     
+    @IBAction func checkPressed(_ sender: Any) {
+        self.checkNumbers()
+    }
+    
+    @IBAction func swipeRight(_ sender: Any) {
+        print("swipe!!!")
+    }
+    
     //MARK:-
     
     private func reload() {
         self.burglarEngine.setupNumber()
         self.currentNumber = 0
         self.numberLabels.forEach { $0.text = "0" }
+        SoundManager.setupSound(num: SoundManager.nextSoundNumber())
     }
     
     private func updateCurrentMarker() {
         self.markerLabels.forEach { $0.isHidden = true }
         self.markerLabels[self.currentNumber].isHidden = false
+    }
+    
+    private func checkNumbers() {
+        SoundManager.setupSound(num: SoundManager.nextSoundNumber())
+        var numbers = [Int]()
+        self.numberLabels.forEach({ (label: UILabel) in
+            if let str = label.text {
+                numbers.append(Int(str) ?? 0)
+            }
+            else {
+                numbers.append(0)
+            }
+        })
+        
+        if self.burglarEngine.checkNumber(numbers: numbers) {
+            Alert(alert: "win.message".localized, preferredStyle: UIAlertControllerStyle.alert, actions: "ok!").present(in: self)
+            self.reload()
+        }
+        else {
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))  
+            self.numbersView.shake()
+        }
     }
 }
 
