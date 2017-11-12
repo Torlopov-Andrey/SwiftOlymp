@@ -37,6 +37,7 @@ class BurglarEngine {
     }
     
     private func exactlyCheck(numbers: [Int]) {
+        self.exactly = 0
         for i in 0...countOfnumbers - 1 {
             if numbers[i] == numbersForUnlock[i] {
                 self.exactly += 1
@@ -45,6 +46,7 @@ class BurglarEngine {
     }
     
     private func existCheck(numbers: [Int]) {
+        self.exist = 0
         for number in numbers {
             for unlockNumber in numbersForUnlock {
                 if number == unlockNumber {
@@ -54,6 +56,5 @@ class BurglarEngine {
         }
         exist -= exactly
     }
-    
 }
 

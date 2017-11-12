@@ -34,8 +34,6 @@ class MainViewController: UIViewController {
         self.burglarEngine = BurglarEngine()
         
         self.rotateView.updateValue = { (value: Int) in
-            
-            print("current number: \(self.burglarEngine.numbersForUnlock[self.currentNumber]) value = \(value)")
             SoundManager.playSound(success: self.burglarEngine.numbersForUnlock[self.currentNumber] == value)
             self.numberLabels[self.currentNumber].text = "\(value)"
         }
@@ -98,7 +96,6 @@ class MainViewController: UIViewController {
     }
     
     private func checkNumbers() {
-        SoundManager.setupSound(num: SoundManager.nextSoundNumber())
         var numbers = [Int]()
         self.numberLabels.forEach({ (label: UILabel) in
             if let str = label.text {
@@ -111,12 +108,17 @@ class MainViewController: UIViewController {
         
         if self.burglarEngine.checkNumber(numbers: numbers) {
             Alert(alert: "win.message".localized, preferredStyle: UIAlertControllerStyle.alert, actions: "ok!").present(in: self)
+            if let score = Int(self.score) {
+                if score == 0 || self.burglarEngine.history.count < score {
+                    self.score = "\(self.burglarEngine.history.count)"
+                    self.score.ud_saveString(key: "score")
+                    self.scoreLabel.text = self.score
+                }
+            }
             self.reload()
         }
-        else {
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))  
+        else {  
             self.numbersView.shake()
         }
     }
 }
-

@@ -194,7 +194,8 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yg-Bd-l5U">
-                                        <rect key="frame" x="148.5" y="140" width="47" height="30"/>
+                                        <rect key="frame" x="270" y="140" width="45" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title=".Check">
                                             <color key="titleColor" red="0.37254901959999998" green="0.37254901959999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -206,13 +207,13 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Triangle" translatesAutoresizingMaskIntoConstraints="NO" id="eXH-Dm-wkD">
-                                        <rect key="frame" x="158.5" y="179" width="27" height="38"/>
+                                        <rect key="frame" x="158.5" y="178.5" width="27" height="38"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OwG-Cp-LoS" customClass="RotateView" customModule="TheBurglar" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="170" width="345" height="397"/>
+                                        <rect key="frame" x="0.0" y="169" width="345" height="398"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="71X-bh-Chr">
-                                                <rect key="frame" x="21" y="47" width="303" height="303"/>
+                                                <rect key="frame" x="21" y="47.5" width="303" height="303"/>
                                             </imageView>
                                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blink" translatesAutoresizingMaskIntoConstraints="NO" id="gwo-kS-KwF">
                                                 <rect key="frame" x="21" y="4.5" width="303" height="303"/>
@@ -317,7 +318,6 @@
                                     <constraint firstItem="d7E-pr-Av5" firstAttribute="centerX" secondItem="ZIG-KJ-wZt" secondAttribute="centerX" id="5cw-Gx-MTb"/>
                                     <constraint firstItem="pl8-zo-roA" firstAttribute="centerX" secondItem="lMN-v1-Hoc" secondAttribute="centerX" id="6lr-36-t32"/>
                                     <constraint firstItem="sbb-Jw-yew" firstAttribute="leading" secondItem="EeG-YR-vyE" secondAttribute="leading" constant="30" id="7gL-Cf-6ga"/>
-                                    <constraint firstItem="6yg-Bd-l5U" firstAttribute="centerX" secondItem="EeG-YR-vyE" secondAttribute="centerX" id="CBh-6T-re7"/>
                                     <constraint firstAttribute="trailing" secondItem="OwG-Cp-LoS" secondAttribute="trailing" id="DW4-Bn-N0v"/>
                                     <constraint firstItem="eXH-Dm-wkD" firstAttribute="centerX" secondItem="EeG-YR-vyE" secondAttribute="centerX" id="GeE-2J-JVZ"/>
                                     <constraint firstItem="pl8-zo-roA" firstAttribute="top" secondItem="V7h-Bh-OJf" secondAttribute="top" id="InD-UW-Z4q"/>
@@ -329,6 +329,7 @@
                                     <constraint firstItem="sbb-Jw-yew" firstAttribute="top" secondItem="EeG-YR-vyE" secondAttribute="top" constant="40" id="dhx-ID-Fv8"/>
                                     <constraint firstAttribute="trailing" secondItem="TbG-Z4-mxF" secondAttribute="trailing" constant="10" id="esK-iQ-EFq"/>
                                     <constraint firstItem="Oha-wM-9Vc" firstAttribute="top" secondItem="pl8-zo-roA" secondAttribute="top" id="gUZ-ww-VEs"/>
+                                    <constraint firstAttribute="trailing" secondItem="6yg-Bd-l5U" secondAttribute="trailing" constant="30" id="mvw-ex-eIH"/>
                                     <constraint firstItem="71X-bh-Chr" firstAttribute="top" secondItem="eXH-Dm-wkD" secondAttribute="bottom" id="oIt-hf-RJ2"/>
                                     <constraint firstItem="OwG-Cp-LoS" firstAttribute="leading" secondItem="EeG-YR-vyE" secondAttribute="leading" id="xFI-a2-KHE"/>
                                     <constraint firstItem="V7h-Bh-OJf" firstAttribute="top" secondItem="d7E-pr-Av5" secondAttribute="top" id="yFA-ku-NFE"/>
