@@ -52,6 +52,8 @@ class BurglarEngine {
                 }
             }
         }
+        exist -= exactly
     }
+    
 }
 
