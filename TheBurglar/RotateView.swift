@@ -23,16 +23,10 @@ class RotateView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //        self.pcs = PolarCoordinateSystem(center: self.rotateImage.center)
-    }
-    
-    private var stepHelperDegree: CGFloat {
-        return 20.0
     }
     
     //MARK: - Touches
@@ -49,7 +43,8 @@ class RotateView: UIView {
         let touchPoint = touch.location(in: self)
         
         self.line.end = touchPoint
-        self.rotateImage.rotate(to: -line.angle.converted(to: UnitAngle.radians).value)
+        self.angle = -line.angle.converted(to: UnitAngle.radians).value
+        self.rotateImage.rotate(to: self.angle)
         self.proccessAngle()
     }
     
