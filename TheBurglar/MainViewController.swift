@@ -34,7 +34,9 @@ class MainViewController: UIViewController {
         self.burglarEngine = BurglarEngine()
         
         self.rotateView.updateValue = { (value: Int) in
-            SoundManager.playSound()
+            
+            print("current number: \(self.burglarEngine.numbersForUnlock[self.currentNumber]) value = \(value)")
+            SoundManager.playSound(success: self.burglarEngine.numbersForUnlock[self.currentNumber] == value)
             self.numberLabels[self.currentNumber].text = "\(value)"
         }
         

@@ -4,7 +4,7 @@ import AVFoundation
 class SoundManager {
     
     static private let shared = SoundManager()
-    static private let names = ["click_1", "click_2", "click_3", "click_4", "click_5", "click_6"]
+    static private let names = ["click_1", "click_4"]
     static private let successSuffix = "_success"
     static private let fileExtension = "mp3"
     static private let volume: Float = 0.5
