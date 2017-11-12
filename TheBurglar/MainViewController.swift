@@ -1,12 +1,15 @@
 import UIKit
+import AVFoundation
+
 
 class MainViewController: UIViewController {
 
     @IBOutlet private(set) var rotateView: RotateView!
     @IBOutlet private(set) var numberLabels: [UILabel]!
     @IBOutlet private(set) var numbersView: UIView!
-    @IBOutlet var lastCheckLabels: [DesignableView]!
     
+    var player: AVAudioPlayer?
+
     var leftPanelAction: (()->())?
     var currentNumber: Int = 0
     var history = [HistoryItem]()
@@ -33,8 +36,7 @@ class MainViewController: UIViewController {
             if let s = self {
                 s.currentNumber = s.currentNumber < 3 ?
                     s.currentNumber + 1 : 0
-                
-                
+
                 if s.currentNumber == 0 {
                     
                     var numbers = [Int]()
@@ -51,20 +53,6 @@ class MainViewController: UIViewController {
                     }
                     else {
                         s.numbersView.shake()
-                    }
-                    
-                    if let lastItem = s.burglarEngine.history.last {
-                        for i in 0...3 {
-                            if i < lastItem.exactly {
-                                s.lastCheckLabels[i].backgroundColor = s.colors.exactly
-                            }
-                            else if i >= lastItem.exactly && i < lastItem.exactly + lastItem.exist {
-                                s.lastCheckLabels[i].backgroundColor = s.colors.exist
-                            }
-                            else {
-                                s.lastCheckLabels[i].backgroundColor = s.colors.absent
-                            }
-                        }
                     }
                 }
             }

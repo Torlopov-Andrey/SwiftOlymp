@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2aW-pA-yy8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2aW-pA-yy8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -232,148 +233,17 @@
                                             <action selector="historyPressed:" destination="GFk-iM-3Zt" eventType="touchUpInside" id="oaT-cU-9nO"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="efx-5R-K2A">
-                                        <rect key="frame" x="107.5" y="547" width="130" height="25"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JTF-AY-8dW" customClass="DesignableView" customModule="TheBurglar" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Asv-mN-fCO" customClass="DesignableView" customModule="TheBurglar" customModuleProvider="target">
-                                                        <rect key="frame" x="2.5" y="2.5" width="20" height="20"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="20" id="4mp-WT-wSe"/>
-                                                            <constraint firstAttribute="width" constant="20" id="9Xi-zs-hAc"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="computeCornerRadius" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="Asv-mN-fCO" firstAttribute="centerX" secondItem="JTF-AY-8dW" secondAttribute="centerX" id="7l1-Ak-doo"/>
-                                                    <constraint firstItem="Asv-mN-fCO" firstAttribute="centerY" secondItem="JTF-AY-8dW" secondAttribute="centerY" id="mvR-AT-GPC"/>
-                                                    <constraint firstAttribute="width" constant="25" id="swy-XV-saZ"/>
-                                                    <constraint firstAttribute="height" constant="25" id="wR4-Ew-w9D"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="computeCornerRadius" value="YES"/>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDf-lS-7Is" customClass="DesignableView" customModule="TheBurglar" customModuleProvider="target">
-                                                <rect key="frame" x="35" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYI-aX-HhF" customClass="DesignableView" customModule="TheBurglar" customModuleProvider="target">
-                                                        <rect key="frame" x="2.5" y="2.5" width="20" height="20"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="20" id="pcu-R2-V7I"/>
-                                                            <constraint firstAttribute="height" constant="20" id="vdQ-JQ-Lma"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="computeCornerRadius" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="ZYI-aX-HhF" firstAttribute="centerX" secondItem="IDf-lS-7Is" secondAttribute="centerX" id="3Wf-iI-a8b"/>
-                                                    <constraint firstAttribute="height" constant="25" id="Gwu-th-pWK"/>
-                                                    <constraint firstItem="ZYI-aX-HhF" firstAttribute="centerY" secondItem="IDf-lS-7Is" secondAttribute="centerY" id="YyD-6Q-g7l"/>
-                                                    <constraint firstAttribute="width" constant="25" id="evz-KO-hoa"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="computeCornerRadius" value="YES"/>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4V1-Al-g5t" customClass="DesignableView" customModule="TheBurglar" customModuleProvider="target">
-                                                <rect key="frame" x="70" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1b-pb-Ic9" customClass="DesignableView" customModule="TheBurglar" customModuleProvider="target">
-                                                        <rect key="frame" x="2.5" y="2.5" width="20" height="20"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="20" id="XVU-dh-b2E"/>
-                                                            <constraint firstAttribute="width" constant="20" id="xt7-n8-V64"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="computeCornerRadius" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="g1b-pb-Ic9" firstAttribute="centerY" secondItem="4V1-Al-g5t" secondAttribute="centerY" id="E97-Am-cRy"/>
-                                                    <constraint firstAttribute="height" constant="25" id="IAW-wp-5iB"/>
-                                                    <constraint firstAttribute="width" constant="25" id="LOU-ub-3fW"/>
-                                                    <constraint firstItem="g1b-pb-Ic9" firstAttribute="centerX" secondItem="4V1-Al-g5t" secondAttribute="centerX" id="kjo-ue-paJ"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="computeCornerRadius" value="YES"/>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nXL-mS-YQR" customClass="DesignableView" customModule="TheBurglar" customModuleProvider="target">
-                                                <rect key="frame" x="105" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVo-xK-GBM" customClass="DesignableView" customModule="TheBurglar" customModuleProvider="target">
-                                                        <rect key="frame" x="2.5" y="2.5" width="20" height="20"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="20" id="DGw-U1-oHi"/>
-                                                            <constraint firstAttribute="height" constant="20" id="Eo6-Kg-f0a"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="computeCornerRadius" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="25" id="9ZO-AV-dNx"/>
-                                                    <constraint firstItem="NVo-xK-GBM" firstAttribute="centerX" secondItem="nXL-mS-YQR" secondAttribute="centerX" id="BfX-ug-7YB"/>
-                                                    <constraint firstAttribute="width" constant="25" id="XPI-6r-r3o"/>
-                                                    <constraint firstItem="NVo-xK-GBM" firstAttribute="centerY" secondItem="nXL-mS-YQR" secondAttribute="centerY" id="v4H-sa-snR"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="computeCornerRadius" value="YES"/>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                        </subviews>
-                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92540907859999999" green="0.92554211620000004" blue="0.92537993190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="2G7-iP-V8M" firstAttribute="top" secondItem="OwG-Cp-LoS" secondAttribute="bottom" constant="30" id="6fX-49-IJG"/>
                                     <constraint firstItem="OwG-Cp-LoS" firstAttribute="top" secondItem="sbb-Jw-yew" secondAttribute="bottom" constant="10" id="6u2-ja-90k"/>
-                                    <constraint firstItem="efx-5R-K2A" firstAttribute="top" secondItem="OwG-Cp-LoS" secondAttribute="bottom" id="7Xc-8A-SvP"/>
                                     <constraint firstItem="sbb-Jw-yew" firstAttribute="leading" secondItem="EeG-YR-vyE" secondAttribute="leading" constant="30" id="Btq-d2-qex"/>
                                     <constraint firstAttribute="trailing" secondItem="OwG-Cp-LoS" secondAttribute="trailing" id="DW4-Bn-N0v"/>
                                     <constraint firstAttribute="bottom" secondItem="2G7-iP-V8M" secondAttribute="bottom" constant="8" id="TXv-yR-8fr"/>
                                     <constraint firstAttribute="trailing" secondItem="sbb-Jw-yew" secondAttribute="trailing" constant="30" id="WjL-ci-4fy"/>
                                     <constraint firstAttribute="trailing" secondItem="2G7-iP-V8M" secondAttribute="trailing" constant="8" id="jie-YJ-Ypc"/>
                                     <constraint firstItem="J4J-1J-Aq6" firstAttribute="leading" secondItem="EeG-YR-vyE" secondAttribute="leading" constant="10" id="oXd-OV-5Jl"/>
-                                    <constraint firstItem="efx-5R-K2A" firstAttribute="centerX" secondItem="EeG-YR-vyE" secondAttribute="centerX" id="rit-Iq-dXY"/>
                                     <constraint firstItem="J4J-1J-Aq6" firstAttribute="top" secondItem="EeG-YR-vyE" secondAttribute="top" constant="8" id="t7u-kq-xum"/>
                                     <constraint firstItem="OwG-Cp-LoS" firstAttribute="leading" secondItem="EeG-YR-vyE" secondAttribute="leading" id="xFI-a2-KHE"/>
                                     <constraint firstItem="sbb-Jw-yew" firstAttribute="top" secondItem="EeG-YR-vyE" secondAttribute="top" constant="80" id="yTQ-kl-4De"/>
@@ -402,15 +272,11 @@
                         <outletCollection property="numberLabels" destination="ZIG-KJ-wZt" collectionClass="NSMutableArray" id="nFd-kF-X6D"/>
                         <outletCollection property="numberLabels" destination="1op-Et-79v" collectionClass="NSMutableArray" id="g4s-oS-I1L"/>
                         <outletCollection property="numberLabels" destination="lMN-v1-Hoc" collectionClass="NSMutableArray" id="BRH-bS-TMW"/>
-                        <outletCollection property="lastCheckLabels" destination="Asv-mN-fCO" collectionClass="NSMutableArray" id="I3U-9P-nxe"/>
-                        <outletCollection property="lastCheckLabels" destination="ZYI-aX-HhF" collectionClass="NSMutableArray" id="PWC-7a-X5o"/>
-                        <outletCollection property="lastCheckLabels" destination="g1b-pb-Ic9" collectionClass="NSMutableArray" id="8ZF-A6-Y1t"/>
-                        <outletCollection property="lastCheckLabels" destination="NVo-xK-GBM" collectionClass="NSMutableArray" id="3S7-H1-D2r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MQW-1H-qpB" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1933.5999999999999" y="-545.57721139430294"/>
+            <point key="canvasLocation" x="1825" y="-546"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vrs-E8-zdG">
@@ -427,7 +293,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dOk-BC-Paj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="197.59999999999999" y="-543.77811094452773"/>
+            <point key="canvasLocation" x="270" y="-546"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="OEQ-DQ-qAe">
@@ -462,7 +328,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="lzText" value="turn_history"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="lzText" value="turn.history"/>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r0B-gh-cKV">
@@ -749,7 +615,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1061.5999999999999" y="-545.57721139430294"/>
+            <point key="canvasLocation" x="1039" y="-546"/>
         </scene>
     </scenes>
     <resources>
