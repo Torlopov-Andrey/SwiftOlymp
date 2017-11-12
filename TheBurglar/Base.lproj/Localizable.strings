@@ -1,2 +1,19 @@
 "turn.history" = "Turns history";
 "no.history" = "No history";
+"about" = "About";
+"rules" = "Rules";
+"app.name" = "The burglar";
+
+"rules_game" = "Your task as a burglar, identify a combination of 4 digits. Turn the drum and listen carefully to the sound of clicks. \n\nPicking up the combination, try to open the safe, if the combination is correct, you won! \n\nYou can also use the hint in the history of moves: \n\nGreen - the figure is matched correctly, stands in its place. \n\nYellow - the figure is matched correctly, but it is not in its place. \n\nGray - the figure is not correct.";
+"title.rules_game" = "Rules of the game";
+"contacts" = "Contacts";
+"developers" = "Developers";
+"email" = "Email:";
+"Andrey" = "Andrey Torlopov";
+"Eugene" = "Eugene Kulinich";
+"Alex" = "Alex Saraev";
+"copyright"= "© 2017 The Burglar. All rights reserved";
+
+"score" = "Score:";
+"win.title" = "Win!";
+"win.message" = "Congratulations! You won!";

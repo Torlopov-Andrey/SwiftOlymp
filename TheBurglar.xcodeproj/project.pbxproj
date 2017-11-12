@@ -22,12 +22,12 @@
 		A45FB5DB1FB8201600E51251 /* click_6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A45FB5D51FB8201600E51251 /* click_6.mp3 */; };
 		A45FB5DC1FB8201600E51251 /* click_3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A45FB5D61FB8201600E51251 /* click_3.mp3 */; };
 		A45FB5DD1FB8201600E51251 /* click_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A45FB5D71FB8201600E51251 /* click_2.mp3 */; };
+		A47FBD4F1FB86611008B5B4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47FBD4E1FB86610008B5B4D /* ViewController.swift */; };
+		A47FBD511FB873D6008B5B4D /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47FBD501FB873D6008B5B4D /* UserDefaults.swift */; };
 		A4A201EE1FA9A3B8001F0D9C /* LocalizationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A201E41FA9A3B7001F0D9C /* LocalizationExtensions.swift */; };
 		A4A201EF1FA9A3B8001F0D9C /* Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A201E51FA9A3B7001F0D9C /* Inspectable.swift */; };
-		A4A201F01FA9A3B8001F0D9C /* PolarCoordinateSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A201E61FA9A3B7001F0D9C /* PolarCoordinateSystem.swift */; };
 		A4A201F11FA9A3B8001F0D9C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A201E71FA9A3B8001F0D9C /* Alert.swift */; };
 		A4A201F21FA9A3B8001F0D9C /* BrushColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A201E81FA9A3B8001F0D9C /* BrushColor.swift */; };
-		A4A201F31FA9A3B8001F0D9C /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A201E91FA9A3B8001F0D9C /* Numbers.swift */; };
 		A4A201F41FA9A3B8001F0D9C /* RotateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A201EA1FA9A3B8001F0D9C /* RotateView.swift */; };
 		A4A201F51FA9A3B8001F0D9C /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A201EB1FA9A3B8001F0D9C /* CornerView.swift */; };
 		A4A201F61FA9A3B8001F0D9C /* BrushView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A201EC1FA9A3B8001F0D9C /* BrushView.swift */; };
@@ -54,12 +54,12 @@
 		A45FB5D51FB8201600E51251 /* click_6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = click_6.mp3; path = mp3/click_6.mp3; sourceTree = "<group>"; };
 		A45FB5D61FB8201600E51251 /* click_3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = click_3.mp3; path = mp3/click_3.mp3; sourceTree = "<group>"; };
 		A45FB5D71FB8201600E51251 /* click_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = click_2.mp3; path = mp3/click_2.mp3; sourceTree = "<group>"; };
+		A47FBD4E1FB86610008B5B4D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A47FBD501FB873D6008B5B4D /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		A4A201E41FA9A3B7001F0D9C /* LocalizationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationExtensions.swift; sourceTree = "<group>"; };
 		A4A201E51FA9A3B7001F0D9C /* Inspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inspectable.swift; sourceTree = "<group>"; };
-		A4A201E61FA9A3B7001F0D9C /* PolarCoordinateSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolarCoordinateSystem.swift; sourceTree = "<group>"; };
 		A4A201E71FA9A3B8001F0D9C /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		A4A201E81FA9A3B8001F0D9C /* BrushColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrushColor.swift; sourceTree = "<group>"; };
-		A4A201E91FA9A3B8001F0D9C /* Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
 		A4A201EA1FA9A3B8001F0D9C /* RotateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotateView.swift; sourceTree = "<group>"; };
 		A4A201EB1FA9A3B8001F0D9C /* CornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 		A4A201EC1FA9A3B8001F0D9C /* BrushView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrushView.swift; sourceTree = "<group>"; };
@@ -167,18 +167,26 @@
 			name = mp3;
 			sourceTree = "<group>";
 		};
+		A47FBD521FB873D8008B5B4D /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				A47FBD501FB873D6008B5B4D /* UserDefaults.swift */,
+				A4A201E71FA9A3B8001F0D9C /* Alert.swift */,
+				A4A201E51FA9A3B7001F0D9C /* Inspectable.swift */,
+				A4A201ED1FA9A3B8001F0D9C /* View.swift */,
+				A47FBD4E1FB86610008B5B4D /* ViewController.swift */,
+			);
+			name = Ext;
+			sourceTree = "<group>";
+		};
 		A4A201E31FA9A3A3001F0D9C /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				A4A201E71FA9A3B8001F0D9C /* Alert.swift */,
+				A47FBD521FB873D8008B5B4D /* Ext */,
 				A4A201E81FA9A3B8001F0D9C /* BrushColor.swift */,
 				A4A201EC1FA9A3B8001F0D9C /* BrushView.swift */,
 				A4A201EB1FA9A3B8001F0D9C /* CornerView.swift */,
-				A4A201E51FA9A3B7001F0D9C /* Inspectable.swift */,
 				A4A201E41FA9A3B7001F0D9C /* LocalizationExtensions.swift */,
-				A4A201E91FA9A3B8001F0D9C /* Numbers.swift */,
-				A4A201E61FA9A3B7001F0D9C /* PolarCoordinateSystem.swift */,
-				A4A201ED1FA9A3B8001F0D9C /* View.swift */,
 				A4A201EA1FA9A3B8001F0D9C /* RotateView.swift */,
 			);
 			name = Core;
@@ -265,18 +273,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4A201F11FA9A3B8001F0D9C /* Alert.swift in Sources */,
-				A4A201F01FA9A3B8001F0D9C /* PolarCoordinateSystem.swift in Sources */,
 				A4A201EE1FA9A3B8001F0D9C /* LocalizationExtensions.swift in Sources */,
 				A4A201F91FA9A3C2001F0D9C /* MainViewController.swift in Sources */,
 				A40DEB051FB70FD70095E40B /* HistoryViewController.swift in Sources */,
 				A40DEB081FB73C320095E40B /* Line.swift in Sources */,
-				A4A201F31FA9A3B8001F0D9C /* Numbers.swift in Sources */,
 				A4A201F51FA9A3B8001F0D9C /* CornerView.swift in Sources */,
 				A4A201F61FA9A3B8001F0D9C /* BrushView.swift in Sources */,
+				A47FBD4F1FB86611008B5B4D /* ViewController.swift in Sources */,
 				A4A201F21FA9A3B8001F0D9C /* BrushColor.swift in Sources */,
 				A40DEB121FB79CC00095E40B /* HistoryTableViewCell.swift in Sources */,
 				A4A201F71FA9A3B8001F0D9C /* View.swift in Sources */,
 				A4A201F41FA9A3B8001F0D9C /* RotateView.swift in Sources */,
+				A47FBD511FB873D6008B5B4D /* UserDefaults.swift in Sources */,
 				A4A201EF1FA9A3B8001F0D9C /* Inspectable.swift in Sources */,
 				A423CD581FA9A0AC009099F8 /* AppDelegate.swift in Sources */,
 				A40DEB0A1FB7843E0095E40B /* BurglarEngine.swift in Sources */,
