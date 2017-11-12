@@ -21,8 +21,11 @@ class BurglarEngine {
         history.removeAll()
         numbersForUnlock.removeAll()
         
-        for _ in 1...countOfnumbers {
-            numbersForUnlock.append(Int(arc4random_uniform(10)))
+        var numbers = Array(0...9).shuffled()
+        Array(1...4).forEach { (_) in
+            if let n = numbers.popLast() {
+                self.numbersForUnlock.append(n)
+            }
         }
     }
     

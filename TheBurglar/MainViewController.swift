@@ -40,12 +40,21 @@ class MainViewController: UIViewController {
         
         self.rotateView.touchEnd = { [weak self] in
             if let s = self {
+                if let str = s.numberLabels[s.currentNumber].text,
+                    let numb = Int(str) {
+                    s.fixNumbers(number: numb,
+                                 completion: { (newValue) in
+                        s.numberLabels[s.currentNumber].text = "\(newValue)"
+                    })
+                }
+                
                 s.currentNumber = s.currentNumber < 3 ?
                     s.currentNumber + 1 : 0
                 
                 if s.currentNumber == 0 {
                     s.checkNumbers()
                 }
+                
                 s.updateCurrentMarker()
             }
         }
@@ -73,20 +82,35 @@ class MainViewController: UIViewController {
         self.updateCurrentMarker()
     }
     
-    @IBAction func checkPressed(_ sender: Any) {
-        self.checkNumbers()
-    }
-    
-    @IBAction func swipeRight(_ sender: Any) {
-        print("swipe!!!")
-    }
-    
     //MARK:-
+    private func fixNumbers(number: Int, completion: (Int)->()) {
+        var userNumbers = [Int]()
+        self.numberLabels.enumerated().forEach { (index: Int, label: UILabel) in
+            
+            if let str = label.text,
+                let n = Int(str),
+                index != self.currentNumber {
+                userNumbers.append(n)
+            }
+        }
+        
+        if userNumbers.contains(number) {
+            let newValue = Array(0...9).filter { (item) -> Bool in
+                return !userNumbers.contains(item) && item > number
+            }.first
+            
+            if let newValue = newValue {
+                completion(newValue)
+            }
+        }
+    }
     
     private func reload() {
         self.burglarEngine.setupNumber()
         self.currentNumber = 0
-        self.numberLabels.forEach { $0.text = "0" }
+        self.numberLabels.enumerated().forEach { (index:Int, label: UILabel) in
+            label.text = "\(index)"
+        }
         SoundManager.setupSound(num: SoundManager.nextSoundNumber())
     }
     

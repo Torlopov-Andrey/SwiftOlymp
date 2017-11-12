@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AppleSDGothicNeo.ttc">
+            <string>AppleSDGothicNeo-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -19,13 +24,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="half_life" translatesAutoresizingMaskIntoConstraints="NO" id="vvf-qG-FZy">
-                                <rect key="frame" x="75.5" y="294" width="223" height="79"/>
+                                <rect key="frame" x="91.5" y="212.5" width="191" height="162"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Burglar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lX-Sk-XVJ">
+                                <rect key="frame" x="127.5" y="403" width="121.5" height="30"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                <color key="textColor" red="0.88470357656478882" green="0.70698690414428711" blue="0.31442621350288391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vvf-qG-FZy" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Bl9-bO-zVI"/>
+                            <constraint firstItem="vvf-qG-FZy" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-40" id="Bl9-bO-zVI"/>
                             <constraint firstItem="vvf-qG-FZy" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="JnM-Qd-bqL"/>
+                            <constraint firstItem="6lX-Sk-XVJ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="OcP-Pa-2wC"/>
+                            <constraint firstItem="6lX-Sk-XVJ" firstAttribute="top" secondItem="vvf-qG-FZy" secondAttribute="bottom" constant="28.5" id="lm3-C3-7C0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -36,6 +49,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="half_life" width="223" height="79"/>
+        <image name="half_life" width="191" height="162"/>
     </resources>
 </document>

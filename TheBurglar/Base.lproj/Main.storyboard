@@ -64,7 +64,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIG-KJ-wZt">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIG-KJ-wZt">
                                                         <rect key="frame" x="71.5" y="13" width="71" height="74"/>
                                                         <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="60"/>
                                                         <color key="textColor" red="0.37254901960784315" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
@@ -85,7 +85,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1op-Et-79v">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1op-Et-79v">
                                                         <rect key="frame" x="142.5" y="13" width="71.5" height="74"/>
                                                         <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="60"/>
                                                         <color key="textColor" red="0.37254901960784315" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
@@ -106,7 +106,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMN-v1-Hoc">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMN-v1-Hoc">
                                                         <rect key="frame" x="214" y="13" width="71" height="74"/>
                                                         <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="60"/>
                                                         <color key="textColor" red="0.37254901960784315" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
@@ -193,27 +193,24 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yg-Bd-l5U">
-                                        <rect key="frame" x="270" y="140" width="45" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <state key="normal" title=".Check">
-                                            <color key="titleColor" red="0.37254901959999998" green="0.37254901959999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HhH-CZ-2AJ">
+                                        <rect key="frame" x="169" y="186" width="6" height="6"/>
+                                        <color key="backgroundColor" red="0.65443128347396851" green="0.65155488252639771" blue="0.65837913751602173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="6" id="580-Rn-CRw"/>
+                                            <constraint firstAttribute="height" constant="6" id="AEL-e0-xtW"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="lzTitle" value="check"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="checkPressed:" destination="GFk-iM-3Zt" eventType="touchUpInside" id="FBE-lT-uDW"/>
-                                        </connections>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Triangle" translatesAutoresizingMaskIntoConstraints="NO" id="eXH-Dm-wkD">
-                                        <rect key="frame" x="158.5" y="178.5" width="27" height="38"/>
-                                    </imageView>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OwG-Cp-LoS" customClass="RotateView" customModule="TheBurglar" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="169" width="345" height="398"/>
+                                        <rect key="frame" x="0.0" y="140" width="345" height="427"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="71X-bh-Chr">
-                                                <rect key="frame" x="21" y="47.5" width="303" height="303"/>
+                                                <rect key="frame" x="21" y="62" width="303" height="303"/>
                                             </imageView>
                                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blink" translatesAutoresizingMaskIntoConstraints="NO" id="gwo-kS-KwF">
                                                 <rect key="frame" x="21" y="4.5" width="303" height="303"/>
@@ -318,19 +315,17 @@
                                     <constraint firstItem="d7E-pr-Av5" firstAttribute="centerX" secondItem="ZIG-KJ-wZt" secondAttribute="centerX" id="5cw-Gx-MTb"/>
                                     <constraint firstItem="pl8-zo-roA" firstAttribute="centerX" secondItem="lMN-v1-Hoc" secondAttribute="centerX" id="6lr-36-t32"/>
                                     <constraint firstItem="sbb-Jw-yew" firstAttribute="leading" secondItem="EeG-YR-vyE" secondAttribute="leading" constant="30" id="7gL-Cf-6ga"/>
+                                    <constraint firstItem="71X-bh-Chr" firstAttribute="top" secondItem="HhH-CZ-2AJ" secondAttribute="bottom" constant="10" id="Byt-of-Wkc"/>
                                     <constraint firstAttribute="trailing" secondItem="OwG-Cp-LoS" secondAttribute="trailing" id="DW4-Bn-N0v"/>
-                                    <constraint firstItem="eXH-Dm-wkD" firstAttribute="centerX" secondItem="EeG-YR-vyE" secondAttribute="centerX" id="GeE-2J-JVZ"/>
                                     <constraint firstItem="pl8-zo-roA" firstAttribute="top" secondItem="V7h-Bh-OJf" secondAttribute="top" id="InD-UW-Z4q"/>
-                                    <constraint firstItem="6yg-Bd-l5U" firstAttribute="top" secondItem="sbb-Jw-yew" secondAttribute="bottom" id="KtB-fR-9V2"/>
                                     <constraint firstAttribute="bottom" secondItem="OwG-Cp-LoS" secondAttribute="bottom" id="LxI-Oq-xME"/>
                                     <constraint firstItem="Oha-wM-9Vc" firstAttribute="centerX" secondItem="1op-Et-79v" secondAttribute="centerX" id="Lxk-Hy-m6N"/>
-                                    <constraint firstItem="OwG-Cp-LoS" firstAttribute="top" secondItem="6yg-Bd-l5U" secondAttribute="bottom" id="RRl-rr-wES"/>
                                     <constraint firstItem="d7E-pr-Av5" firstAttribute="top" secondItem="Peq-vD-kzc" secondAttribute="bottom" id="T0e-2u-eaK"/>
                                     <constraint firstItem="sbb-Jw-yew" firstAttribute="top" secondItem="EeG-YR-vyE" secondAttribute="top" constant="40" id="dhx-ID-Fv8"/>
                                     <constraint firstAttribute="trailing" secondItem="TbG-Z4-mxF" secondAttribute="trailing" constant="10" id="esK-iQ-EFq"/>
                                     <constraint firstItem="Oha-wM-9Vc" firstAttribute="top" secondItem="pl8-zo-roA" secondAttribute="top" id="gUZ-ww-VEs"/>
-                                    <constraint firstAttribute="trailing" secondItem="6yg-Bd-l5U" secondAttribute="trailing" constant="30" id="mvw-ex-eIH"/>
-                                    <constraint firstItem="71X-bh-Chr" firstAttribute="top" secondItem="eXH-Dm-wkD" secondAttribute="bottom" id="oIt-hf-RJ2"/>
+                                    <constraint firstItem="OwG-Cp-LoS" firstAttribute="top" secondItem="sbb-Jw-yew" secondAttribute="bottom" id="hf1-CU-WYe"/>
+                                    <constraint firstItem="HhH-CZ-2AJ" firstAttribute="centerX" secondItem="EeG-YR-vyE" secondAttribute="centerX" id="kgA-wz-w8v"/>
                                     <constraint firstItem="OwG-Cp-LoS" firstAttribute="leading" secondItem="EeG-YR-vyE" secondAttribute="leading" id="xFI-a2-KHE"/>
                                     <constraint firstItem="V7h-Bh-OJf" firstAttribute="top" secondItem="d7E-pr-Av5" secondAttribute="top" id="yFA-ku-NFE"/>
                                 </constraints>
@@ -408,6 +403,9 @@
                             <constraint firstAttribute="trailing" secondItem="EeG-YR-vyE" secondAttribute="trailing" constant="15" id="cxM-ui-Ook"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FsJ-zP-qZx"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="c99-fL-I6R" appends="YES" id="7Y2-gM-Tse"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="E2I-7e-jIf"/>
                     <connections>
@@ -425,13 +423,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MQW-1H-qpB" sceneMemberID="firstResponder"/>
-                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="7Bb-rC-Aoj">
-                    <rectEdge key="edges" left="YES"/>
+                <swipeGestureRecognizer direction="right" id="c99-fL-I6R">
                     <connections>
-                        <action selector="swipeRight:" destination="GFk-iM-3Zt" id="16N-Uh-Wts"/>
-                        <outlet property="delegate" destination="FsH-rv-CpA" id="APC-X0-F5U"/>
+                        <action selector="historyPressed:" destination="GFk-iM-3Zt" id="BBS-ns-DUj"/>
+                        <outlet property="delegate" destination="GFk-iM-3Zt" id="0Hw-rz-Yio"/>
                     </connections>
-                </screenEdgePanGestureRecognizer>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1824.8" y="-546.47676161919048"/>
         </scene>
@@ -785,7 +782,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="DK6-SO-tkg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="half_life" translatesAutoresizingMaskIntoConstraints="NO" id="DK6-SO-tkg">
                                 <rect key="frame" x="137" y="50" width="100" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1023,7 +1020,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="half_life" translatesAutoresizingMaskIntoConstraints="NO" id="TXW-1G-pIW">
-                                <rect key="frame" x="76" y="488" width="223" height="79"/>
+                                <rect key="frame" x="92" y="405" width="191" height="162"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1047,12 +1044,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Triangle" width="27" height="38"/>
         <image name="blink" width="229" height="116"/>
         <image name="close" width="22" height="22"/>
-        <image name="half_life" width="223" height="79"/>
+        <image name="half_life" width="191" height="162"/>
         <image name="history" width="16" height="14"/>
         <image name="lock" width="303" height="303"/>
-        <image name="logo" width="512" height="512"/>
     </resources>
 </document>

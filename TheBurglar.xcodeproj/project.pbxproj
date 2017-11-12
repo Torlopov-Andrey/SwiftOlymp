@@ -32,6 +32,7 @@
 		A4CC47731FB887D9006F1EF1 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CC47721FB887D9006F1EF1 /* SoundManager.swift */; };
 		A4CC477A1FB88D23006F1EF1 /* click_1_success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4CC47741FB88D22006F1EF1 /* click_1_success.mp3 */; };
 		A4CC477E1FB88D23006F1EF1 /* click_4_success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A4CC47781FB88D22006F1EF1 /* click_4_success.mp3 */; };
+		A4F7FF951FB8DD9F00F8C05E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F7FF941FB8DD9F00F8C05E /* Array.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		A4CC47721FB887D9006F1EF1 /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		A4CC47741FB88D22006F1EF1 /* click_1_success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = click_1_success.mp3; path = mp3/click_1_success.mp3; sourceTree = "<group>"; };
 		A4CC47781FB88D22006F1EF1 /* click_4_success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = click_4_success.mp3; path = mp3/click_4_success.mp3; sourceTree = "<group>"; };
+		A4F7FF941FB8DD9F00F8C05E /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		A47FBD521FB873D8008B5B4D /* Ext */ = {
 			isa = PBXGroup;
 			children = (
+				A4F7FF941FB8DD9F00F8C05E /* Array.swift */,
 				A47FBD501FB873D6008B5B4D /* UserDefaults.swift */,
 				A4A201E71FA9A3B8001F0D9C /* Alert.swift */,
 				A4A201E51FA9A3B7001F0D9C /* Inspectable.swift */,
@@ -268,6 +271,7 @@
 				A4A201F61FA9A3B8001F0D9C /* BrushView.swift in Sources */,
 				A47FBD4F1FB86611008B5B4D /* ViewController.swift in Sources */,
 				A4A201F21FA9A3B8001F0D9C /* BrushColor.swift in Sources */,
+				A4F7FF951FB8DD9F00F8C05E /* Array.swift in Sources */,
 				A40DEB121FB79CC00095E40B /* HistoryTableViewCell.swift in Sources */,
 				A4A201F71FA9A3B8001F0D9C /* View.swift in Sources */,
 				A4A201F41FA9A3B8001F0D9C /* RotateView.swift in Sources */,
