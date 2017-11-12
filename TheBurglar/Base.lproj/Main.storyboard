@@ -1022,15 +1022,20 @@
                                     <action selector="close" destination="air-rB-NPg" eventType="touchUpInside" id="Bam-0f-fTy"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="half_life" translatesAutoresizingMaskIntoConstraints="NO" id="TXW-1G-pIW">
+                                <rect key="frame" x="76" y="488" width="223" height="79"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="S1N-b5-hjN" firstAttribute="bottom" secondItem="TXW-1G-pIW" secondAttribute="bottom" constant="100" id="4Dr-jJ-4ji"/>
                             <constraint firstItem="IqH-D9-MAW" firstAttribute="top" secondItem="AJT-Ad-uHZ" secondAttribute="bottom" constant="30" id="Htp-Ng-PXa"/>
                             <constraint firstItem="IqH-D9-MAW" firstAttribute="leading" secondItem="S1N-b5-hjN" secondAttribute="leading" constant="20" id="NMR-iz-YDk"/>
                             <constraint firstItem="AJT-Ad-uHZ" firstAttribute="top" secondItem="S1N-b5-hjN" secondAttribute="top" constant="30" id="Oa6-hX-Ru0"/>
                             <constraint firstItem="AJT-Ad-uHZ" firstAttribute="centerX" secondItem="tud-kK-Jbb" secondAttribute="centerX" id="SIu-eR-FKf"/>
                             <constraint firstItem="IqH-D9-MAW" firstAttribute="centerX" secondItem="tud-kK-Jbb" secondAttribute="centerX" id="cbl-Gv-RkU"/>
                             <constraint firstItem="S1N-b5-hjN" firstAttribute="trailing" secondItem="eDd-KH-qvg" secondAttribute="trailing" constant="20" id="cqZ-XE-8t5"/>
+                            <constraint firstItem="TXW-1G-pIW" firstAttribute="centerX" secondItem="tud-kK-Jbb" secondAttribute="centerX" id="t2M-DB-e1z"/>
                             <constraint firstItem="eDd-KH-qvg" firstAttribute="top" secondItem="S1N-b5-hjN" secondAttribute="top" constant="20" id="vTx-Hn-GFr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="S1N-b5-hjN"/>
@@ -1038,13 +1043,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rR6-4r-Fnb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3430" y="-546"/>
+            <point key="canvasLocation" x="3429.5999999999999" y="-546.47676161919048"/>
         </scene>
     </scenes>
     <resources>
         <image name="Triangle" width="27" height="38"/>
         <image name="blink" width="229" height="116"/>
         <image name="close" width="22" height="22"/>
+        <image name="half_life" width="223" height="79"/>
         <image name="history" width="16" height="14"/>
         <image name="lock" width="303" height="303"/>
         <image name="logo" width="512" height="512"/>
